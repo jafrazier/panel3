@@ -1,0 +1,23 @@
+<h1>Instructors <button class="btn pageBtn"><%= link_to "New", new_instructor_path %></button></h1>
+<div class="myContainer">
+  <% @instructors.reverse.each do |i| %>
+    <div class="instructor">
+      <h3><%= i.full_name.capitalize %> <button class="btn infoButton"><%= link_to 'Edit', edit_instructor_path(i)%></button>
+        <button class="btn infoButton"><%= link_to 'Delete', instructor_path(i.id), method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: 'terminate' %></button>
+      </h3>
+      <div class="instructorInfo">
+        <p>Age: <%= i.age %></p>
+        <p>Education: <%= i.education %></p>
+        <p>Salary: $<%= i.salary %></p>
+        <p>Email: <%= i.email %></p>
+        <button class="showCohots btn">Cohorts</button>
+        <div class="cohortList">
+          <%Cohort.where(instructor_id: i.id).each do |c|%>
+            <p><%=c.name%>
+            <button class="btn infoButton cohortBtn"><%= link_to 'Show', c %></button></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,36 @@
+<h1>Cohorts   <button class="btn pageBtn"><%= link_to "New", cohorts_new_path%></button></h1>
+<div class="myContainer">
+  <% @cohorts.each do |c|%>
+
+    <div class="cohort">
+
+      <h3>
+        <%= c.name %>
+        <button class="btn infoButton"><%= link_to 'Edit', edit_cohort_path(c)%></button>
+        <button class="btn infoButton"><%= link_to 'Delete', cohort_path(c.id), method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: 'terminate' %></button>
+      </h3>
+
+      <div class="cohortInfo">
+
+        <p>Starts: <%= c.start_date%></p>
+        <p>Ends: <%= c.end_date  %></p>
+        <% Course.where(id: c.course_id).each do |x| %>
+          <p>Course: <%= x.name%></p>
+        <% end %>
+        <% Instructor.where(id: c.instructor_id).each do |i|%>
+          <p>Instructor: <%= i.full_name%></p>
+        <% end %>
+        <button class="showStudents btn">Students</button>
+        <div class="studentList">
+          <h5>Name:</h5>
+          <% Student.where(cohort_id: c.id).each do |s|%>
+          <p><%= s.full_name %></p>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+
+  <%end%>
+
+</div>

@@ -1,0 +1,13 @@
+<%= form_for @cohort do |f| %>
+<%= f.label 'Name', :class => "label" %>
+<%= f.text_field :name, :class => "form-control"%><br>
+<%= f.label 'Start date', :class => "label" %>
+<%= f.date_field :start_date, :class => "form-control" %><br>
+<%= f.label 'End date', :class => "label" %>
+<%= f.date_field :end_date, :class => "form-control" %><br>
+<%= f.label 'Course', :class => "label" %>
+<%= f.collection_select :course_id, @courses, :id, :name, {include_blank: true} , :class => "form-control" %><br>
+<%= f.label 'Instructor', :class => "label"%>
+<%= f.collection_select :instructor_id, @instructors, :id, :full_name , {include_blank: true}, :class => "form-control"  %><br>
+<%= f.submit :class=>"btn" %>
+<% end %>

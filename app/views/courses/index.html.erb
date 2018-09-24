@@ -1,0 +1,12 @@
+<h1>Courses <button class="btn pageBtn"><%= link_to "New", courses_new_path %></button></h1>
+<div class="wrapper">
+  <% @courses.reverse.each do |c| %>
+  <div class="course grid-item">
+    <h3><%= c.name %> <button class="btn infoButton"><%= link_to 'Edit', edit_course_path(c)%></button>
+      <button class="btn infoButton"><%= link_to 'Delete', course_path(c.id), method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: 'terminate' %></button></h3>
+    <div class="courseInfo">
+      <h4>Total hours: <%= c.total_hours %></h4>
+    </div>
+  </div>
+  <% end %>
+</div>

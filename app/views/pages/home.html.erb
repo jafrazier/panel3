@@ -1,0 +1,12 @@
+<h1>Dashboard</h1>
+<div class="home">
+  <div class="welcome">
+    <h2>Welcome <%= current_user.full_name.capitalize %></h2>
+    <h3>Your Cohorts</h3>
+    <%Cohort.where(instructor_id: current_user.id).each do |c|%>
+        <p><%=c.name%>
+        <button class="btn infoButton cohortBtn"><%= link_to 'Show', c %></button></p>
+    <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,353 @@
+ @import 'bootstrap';
+
+ *{
+   padding: 0;
+   margin: 0;
+   font-family: 'Josefin Sans', sans-serif;
+ }
+ body {
+   background: #f1f1f1;
+   width: 98vw;
+   height: 98vh;
+   overflow: hidden;
+   background: #DCD0A2;
+   margin: 0;
+   padding: 0;
+ }
+
+ header{
+   width: 100vw;
+   margin: 0;
+   height: 5vh;
+   background: #476268;
+ }
+
+ p {
+   margin: .5vh 0;
+   font-weight: 600;
+ }
+
+ a {
+   color: #476268;
+   text-decoration: none;
+   font-style: 600;
+ }
+
+ a:hover {
+   color: rgba(255,255,255,.6);
+   text-decoration: none;
+ }
+ h1, h2, h3, h6 {
+   text-shadow: 3px 3px 1px rgba(0, 0, 0, .2);
+   font-family: 'Josefin Sans', sans-serif;
+ }
+ h1{
+   text-align: center;
+   color: #476268;
+   margin: 0;
+   width: 100vw;
+   padding-bottom: 2vh;
+   position: absolute;
+   top: 12vh;
+   left: 0;
+   font-size: 5em;
+ }
+ h2 {
+   width: 100%;
+   text-align: center;
+   color: #476268;
+   font-size: 3em;
+ }
+
+ h6 {
+   background: rgba(206,193,141,.2);
+   padding: 0 1vh;
+   margin: 0;
+   height: 6vh;
+   text-align: center;
+   font-size: 3vh;
+   border-bottom: black 2px solid;
+   border-radius: 10px 10px 0 0;
+ }
+
+ .navbar {
+   height: 4vh;
+   background: #40a798;
+ }
+ .nav-tabs {
+   border-bottom: #476268 1vh solid;
+ }
+ .nav-tabs .nav-link{
+   border: none;
+ }
+
+
+ .secondary-nav{
+   margin-top: 22vh;
+ }
+ .secondary-nav .nav-item a{
+   padding: .3em 1em;
+   font-weight: 600;
+ }
+ .secondary-nav .nav-item:hover {
+   background: rgba(0,0,0,.1);
+   border-radius: 10px 10px 0 0;
+   border-left: #476268 .5vh solid !important;
+   border-top:  #476268 .5vh solid !important;
+   border-right:  #476268 .5vh solid !important;
+   border-bottom: none !important;
+ }
+ .nav-item a:hover {
+   color: rgba(0, 0, 0,.9);
+
+ }
+
+ .logo {
+   text-align: center;
+ }
+
+ .logo img {
+   height: 35vh;
+   margin: 0;
+   position: fixed;
+   top: -1.5vh;
+   left: -1vw;
+   z-index: -1;
+ }
+
+ .secondary-nav {
+   width: 100vw;
+ }
+ .subbg {
+   background: red !important;
+ }
+
+ .label {
+   margin-left: 2.5vw;
+   display: inline;
+   font-weight: 600;
+ }
+ .login, .newInstruc, .newCohort, .newCourse,.newStudent{
+   width: 35vw;
+   margin: 0 auto;
+   margin-top: 2.5vh;
+   position: relative;
+   border: black 3px solid;
+   background: rgba(0,173,154,.5);
+   border-radius: 10px;
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, .7);
+ }
+
+ .login{
+   height: 35vh;
+   top: 20vh;
+   background: rgba(206,193,141,.5);
+ }
+ .landing{
+   margin-top: -2vh;
+   width: 100vw;
+   height: 100vh;
+   background: url('/homebg.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+ }
+
+ .welcome{
+   width: 60vw;
+   height: 50vh;
+   border: #476268 1vh solid;
+   position: absolute;
+   left: 20vw;
+   top: 40vh;
+   background: rgba(255,255,255,.7);
+   box-shadow: 6px 6px 5px rgba(0, 0, 0, .7);
+   border-radius: 10px;
+ }
+ .login h3, .newInstruc h3, .newCohort h3, .newCourse h3, ,.newStudent h3, h3{
+   background: rgba(206,193,141,.2);
+   padding: 0 1vh;
+   margin: 0;
+   margin-bottom: 2.5vw;
+   height: 6vh;
+   text-align: center;
+   font-size: 4vh;
+   border-bottom: black 2px solid;
+   border-radius: 10px 10px 0 0;
+ }
+
+ .form-control {
+   width: 25vw;
+   margin-bottom: 2.5vh;
+   border-radius: 20px;
+   display: inline;
+ }
+
+ .newInstruc{
+   margin-top:-10vh;
+   height: 70vh;
+   overflow: scroll;
+
+ }
+ .newStudent , .newCohort{
+   margin-top: -10vh;
+   height: 65vh;
+
+ }
+ .newCourse {
+   height: 35vh;
+ }
+
+ .btn {
+   width: 10vw;
+   margin-left: 12.5vw;
+   background-color: rgba(255, 255, 255, .5);
+   border: rgba(0, 0, 0, .7) 1px solid;
+   font-size: 1.1vw;
+   color: #476268;
+   border-radius: 20px;
+   box-shadow: 3px 3px 1px rgba(0, 0, 0, .7);
+   font-weight: 600;
+ }
+
+ .btn:hover {
+   background-color: rgba(255, 255, 255, .3);
+   border: rgba(0, 0, 0, .7) 1px solid;
+ }
+
+ .btn:active {
+   background-color: rgba(0, 0, 0, .5);
+   border: rgba(0, 0, 0, .7) 3px solid;
+   box-shadow: none;
+ }
+
+ .btn.focus , .btn:focus {
+   background-color: rgba(0, 0, 0, .5);
+   border: rgba(0, 0, 0, .7) 3px solid;
+ }
+
+ .infoButton {
+   width: 5vw;
+   margin: 0;
+   color: white;
+ }
+
+ .infoButton {
+   width: 5vw;
+   margin: 0;
+   color: white;
+   padding: .1vw;
+ }
+ .pageBtn {
+   width: 5vw;
+   height: 4vh;
+   padding: 0;
+ }
+ .home {
+   width: 100vw;
+   height: 70vh;
+   background: url('https://theninehertz.com/wp-content/uploads/2016/11/Web-development-1.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100% 125%;
+
+ }
+ .myContainer{
+   margin: 0 auto;
+   height: 75vh;
+   width: 100vw;
+   overflow: scroll;
+   color: #476268;
+   background: url('https://theninehertz.com/wp-content/uploads/2016/11/Web-development-1.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100% 120%;
+   padding: 2vw 3vw 4vw 3vw;
+ }
+
+ .cohort,.instructor {
+   width: 75vw;
+   border: black 2px solid;
+   margin: 0 auto;
+   margin-bottom: 2vh;
+   color: #476268;
+   border-radius: 10px 10px 0 0;
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, .7);
+   background: rgba(255,255,255,.7);
+ }
+
+ .cohort h3, .instructor h3 , .course h3{
+   margin-bottom: 1.5vh;
+ }
+
+ .cohortInfo,.studentInfo, .instructorInfo, .courseInfo{
+   padding: .5em;
+ }
+
+ .showStudents, .pageBtn,.showCohots{
+   margin: 0;
+ }
+
+ .studentList, .cohortList {
+   margin-top: 2vh;
+   font-size: 1em;
+ }
+
+ .studentBtn, .cohortBtn{
+   padding: 0;
+ }
+ .enrolled {
+   color: blue;
+ }
+ .grid-container {
+   display: grid;
+   height: 70vh;
+   width: 100vw;
+   grid-template-columns: 30vw 30vw 30vw;
+   grid-gap: 2vw;
+   padding: 2vw 3vw 4vw 3vw;
+   margin-top: 0;
+   overflow: scroll;
+   background: url('https://theninehertz.com/wp-content/uploads/2016/11/Web-development-1.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100% 125%;
+ }
+
+ .grid-item{
+   border: black 2px solid;
+   border-radius: 10px 10px 0 0;
+   color: #476268;
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, .7);
+   background: rgba(255,255,255,.7);
+ }
+
+ .wrapper {
+   width: 100vw;
+   height: 70vh;
+   display: grid;
+   grid-template-columns: 45vw 45vw;
+   grid-gap: 2vw;
+   padding: 2vw 4vw;
+   margin-top: 0;
+   overflow: scroll;
+   background: url('https://theninehertz.com/wp-content/uploads/2016/11/Web-development-1.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100% 125%;
+ }
+
+ .mycohort {
+   width: 50vw;
+   height: 50vh;
+   border: black .5vh solid;
+   margin: 0 auto;
+   padding: 1vw;
+   margin-top: 1vh;
+   border-radius: 10px 10px 0 0;
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, .7);
+   background: rgba(255, 255, 255,.7 );
+ }
+ .mycohort h3 {
+   margin-bottom: 1vh;
+ }

@@ -1,0 +1,18 @@
+<h1>Students <button class="btn pageBtn"><%= link_to "New", students_new_path %></button></h1>
+<div class="grid-container">
+  <% @students.reverse.each do |s| %>
+    <div class="grid-item">
+      <h6><%= s.full_name.capitalize %> <button class="btn infoButton"><%= link_to 'Edit', edit_student_path(s)%></button>
+        <button class="btn infoButton"><%= link_to 'Delete', student_path(s.id), method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: 'terminate' %></button>
+
+    </h6>
+      <div class="studentInfo">
+        <p>Age: <%= s.age %></p>
+        <p>Education: <%= s.education %></p>
+        <% Cohort.where(id: s.cohort_id).each do |c|%>
+          <p class="enrolled">Enrolled in <%= c.name %></p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,18 @@
+<h1><%= current_user.full_name%></h1>
+<div class="mycohort">
+<h3><%= @cohort.name %></h3>
+<p>Starts: <%= @cohort.start_date.strftime("%B %d, %Y") %></p>
+<p>Ends: <%= @cohort.end_date.strftime("%B %d, %Y") %></p>
+<% Course.where(id: @cohort.course_id).each do |c|%>
+  <p>Course: <%= c.name%></p>
+<% end %>
+<%if !current_user%>
+<% Instructor.where(id: @cohort.instructor_id).each do |i|%>
+  <p>Instructor: <%= i.full_name %></p>
+<% end %>
+<% end %>
+<h5>Students</h5>
+  <% Student.where(cohort_id: @cohort.id).each do |s|%>
+    <p><%= s.full_name %> <span><%= link_to 'Show', s %> <%= link_to 'Edit', edit_student_path(s)%></span></p>
+  <% end %>
+</div>
