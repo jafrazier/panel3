@@ -5,6 +5,7 @@ ruby '2.4.1'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'faker'
+gem 'rollbar'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
